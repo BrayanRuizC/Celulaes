@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body bg-dark p-4 text-white">
+                <h4 class="text-success">Modifica Celular</h4>
+<form action="/celulares/{{celulares._id}}/updateCelulares" method="POST">
+
+     <div>
+        <label for="clave">Modificar Clave:</label>
+        <input type="text" name="clave" placeholder="Clave"
+        value="{{celulares.clave}}"class="form-control bg-dark text-white">
+    </div>
+
+    <div>
+        <label for="marca">Modificar Marca:</label>
+        <input type="text" name="marca" placeholder="Marca"
+        value="{{celulares.marca}}"class="form-control bg-dark text-white">
+    </div>
+
+    <div>
+        <label for="precio">Modificar Precio:</label>
+        <input type="text" name="precio" placeholder="Precio"
+        value="{{celulares.precio}}"class="form-control bg-dark text-white">
+    </div>
+  
+     <div>
+        <label for="fechaLanzamiento">Modificar Fecha Lanzamiento:</label>
+        <input type="date" name="fechaLanzamiento" placeholder="Fecha Lanzamiento"
+        value="{{celulares.fechaLanzamiento}}"class="form-control bg-dark text-white">
+    </div>
+
+   <div>
+
+        <label for="ram">Modificar RAM:</label>
+        <input type="text" name="ram" placeholder="RAM"
+        value="{{celulares.ram}}"class="form-control bg-dark text-white">
+    </div>
+
+
+    <div>
+
+        <label for="almacenamiento">Modificar Almacenamiento:</label>
+        <input type="text" name="almacenamiento" placeholder="Almacenamiento"
+        value="{{celulares.almacenamiento}}"class="form-control bg-dark text-white">
+    </div>
+
+    <div>
+        <label for="cantCamaras">Modificar Cantidad de camaras:</label>
+        <input type="text" name="cantCamaras" placeholder="Cantidad Camaras"
+        value="{{celulares.cantCamaras}}"class="form-control bg-dark text-white">
+    </div>
+
+    <button class="btn btn-info">Actualizar</button>
+</form>
+            </div>
+        </div>
+    </div>
+</div>

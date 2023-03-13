@@ -1,0 +1,44 @@
+{{#if celulares}}
+<br>
+<table class="table table-responsive table-bordered table-striped table-hover table-dark">
+    <thead>
+        <tr class="text-center text-warning">
+            <th>id</th>
+            <th>Clave</th>
+            <th>Marca</th>
+            <th>Precio</th>
+            <th>fechaLanzamiento</th>
+            <th>RAM</th>
+            <th>Almacenamiento</th>
+            <th>cantCamaras</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each celulares}}
+        <tr class="text-center">
+            <td>{{@index}}</td>
+            <td>{{clave}}</td>
+            <td>{{marca}}</td>
+            <td>{{precio}}</td>
+            <td>{{fechaLanzamiento}}</td>
+            <td>{{ram}}</td>
+            <td>{{almacenamiento}}</td>
+            <td>{{cantCamaras}}</td>
+            <td>
+                <a href="/celulares/{{_id}}/updateCelulares" class="btn btn-info">Actualizar</a>
+                <a href="/celulares/{{_id}}/deleteCelulares" class="btn btn-danger">Eliminar</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+        <h1>No hay Celulares</h1>
+        <img src="/icons/noCel.png" class="w-75">
+    </div>
+</div>
+{{/if}}
